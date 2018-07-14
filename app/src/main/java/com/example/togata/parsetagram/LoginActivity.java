@@ -17,7 +17,6 @@ import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
 public class LoginActivity extends AppCompatActivity {
-
     private EditText usernameInput;
     private EditText passwordInput;
     private Button loginBtn;
@@ -33,7 +32,6 @@ public class LoginActivity extends AppCompatActivity {
         passwordInput = (EditText) findViewById(R.id.etPassword);
         loginBtn = (Button) findViewById(R.id.bLogin);
         signupBtn = (Button) findViewById(R.id.bSignUp) ;
-
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +50,6 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
             }
-
         });
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -102,6 +99,4 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
     }
-
-
 }
