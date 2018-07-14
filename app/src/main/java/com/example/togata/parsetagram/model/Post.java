@@ -6,6 +6,8 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
+import java.util.Date;
+
 /**
  * Created by togata on 7/9/18.
  */
@@ -16,6 +18,9 @@ public class Post extends ParseObject{
     private static final String KEY_DESCRIPTION = "description";
     private static final String KEY_USER = "user";
     private static final String KEY_IMAGE = "image";
+    private static final String KEY_CREATED_AT = "createdAt";
+
+    public Post(){}
 
     public String getDescription(){
         return getString(KEY_DESCRIPTION);
@@ -36,6 +41,13 @@ public class Post extends ParseObject{
     }
     public void setUser(ParseObject update){
         put(KEY_USER, update);
+    }
+
+    public Date getDate(){
+        return getCreatedAt();
+    }
+    public void setDate(Date update){
+        put(KEY_CREATED_AT, update);
     }
 
 

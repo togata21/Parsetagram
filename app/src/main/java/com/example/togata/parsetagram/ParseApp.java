@@ -3,6 +3,7 @@ package com.example.togata.parsetagram;
 import android.app.Application;
 
 import com.example.togata.parsetagram.model.Post;
+import com.example.togata.parsetagram.model.User;
 import com.parse.Parse;
 import com.parse.ParseObject;
 
@@ -16,6 +17,7 @@ public class ParseApp extends Application{
         super.onCreate();
 
         ParseObject.registerSubclass(Post.class);
+        ParseObject.registerSubclass(User.class);
 
         final Parse.Configuration config = new Parse.Configuration.Builder(this)
                 .applicationId("hashtagParsing")

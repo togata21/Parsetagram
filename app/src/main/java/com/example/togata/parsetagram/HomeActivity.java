@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private EditText descriptionInput;
     private Button createButton;
-    private Button refreshButton;static final int REQUEST_IMAGE_CAPTURE = 1;
+    static final int REQUEST_IMAGE_CAPTURE = 1;
     Bitmap imageBitmap;
     ImageView imageView;
 
@@ -42,7 +42,6 @@ public class HomeActivity extends AppCompatActivity {
 
         descriptionInput = (EditText) findViewById(R.id.etDescription);
         createButton = (Button) findViewById(R.id.bCreate);
-        refreshButton = (Button) findViewById(R.id.bRefresh);
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,13 +56,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
         imageView = (ImageView) findViewById(R.id.ivImage);
-        refreshButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadTopPosts();
-            }
-        });
-
 
         loadTopPosts();
 
@@ -87,11 +79,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
-
-    public void takePicture(View v){
-        dispatchTakePictureIntent();
-    }
-
 
 
     public void loadTopPosts() {
@@ -145,7 +132,7 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
-    public void logOut(View v){
+    private void logOut(View v){
 
         ParseUser.logOut();
         SharedPreferences preferences = getSharedPreferences("com.example.togete.parsetagram", Context.MODE_PRIVATE);

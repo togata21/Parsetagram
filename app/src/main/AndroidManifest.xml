@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.togata.parsetagram">
+    package="com.example.togata.parsetagram"
+    >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -31,6 +32,11 @@
             android:name=".FeedActivity"
             android:label="@string/title_activity_feed"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".DetailActivity" />
     </application>
 
 </manifest>

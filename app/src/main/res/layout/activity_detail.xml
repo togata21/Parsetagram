@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/ivImagePostDetail"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/ivProfilePictureDetail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/tvHandleDetail"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvLocationDetail"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/ivProfilePictureDetail"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvLocationDetail"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ivProfilePictureDetail"
+        android:layout_alignStart="@id/tvHandleDetail"
+        android:text="TextView"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tvDescriptionDetail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/ivImagePostDetail"
+        android:layout_below="@id/ivImagePostDetail"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="23dp"
+        android:text="Description" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_toEndOf="@+id/tvLocationDetail"
+        android:onClick="back"
+        android:text="Back"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tvDateDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvHandleDetail"
+        android:layout_toEndOf="@+id/ivImagePostDetail"
+        android:text="date"
+        android:textAlignment="textEnd" />
+</RelativeLayout>
